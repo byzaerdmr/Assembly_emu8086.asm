@@ -7,8 +7,7 @@ MOV AX, BX            ; REG, REG
 MOV [1000h], 4h       ; memory, immediate  
 
 MOV DX, [1000H]       ; REG, memory
-                                       
-                                       
+                                                                              
 MOV DS, [1000h]       ; SREG, memory  
 
 MOV [1000h], DS       ; memory, SREG 
