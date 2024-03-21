@@ -37,3 +37,18 @@ ADD [1000h], 3h  ; memory immediate
 ADD AX, 4h       ; REG,immediate
  
 ret
+
+
+
+MOV [1000h], 6
+
+SUB AX, [1000h]   
+SUB AX, [1000h]
+SUB AX, [1000h]
+
+SUB BX, AX
+
+ret
+
+
+
