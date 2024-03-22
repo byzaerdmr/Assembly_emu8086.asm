@@ -81,3 +81,21 @@ Jmp label
 
 theend:
 ret
+
+
+
+; this loop work 7 times  
+
+MOV AL, 3
+
+label:
+
+ADD AL, 1
+CMP AL, 10   ; CL-10  ;
+JE theend
+
+Jmp label
+
+theend:
+
+ ret
