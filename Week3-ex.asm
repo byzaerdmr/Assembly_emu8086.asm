@@ -40,34 +40,25 @@ ret
 
 
 
-MOV BX, 100h
-MOV DS, BX
-MOV BX, 300h
-MOV ES, BX   
-              
-MOV SI, 1000h
-MOV DI, 1000h             
-              
+MOV AX, 0100h 
+MOV DS,AX
+MOV SI,1000h
+             
+MOV AX,0300h            
+MOV ES,AX
+MOV DI,1000h
 
-MOV  CX, 100h  ;255
+MOV CX,0100h
 
-
-label: 
-
-MOV AX, DS:[SI] 
-INC AX                ;ADD AX,1
-MOV ES:[DI],AX  
-
-INC SI
-INC SI
-
+dongu:
+MOV AX, DS:SI
+INC AX
+MOV ES:DI,AX
 ADD DI,2
+ADD SI,2              
+LOOP dongu
 
-
-
-LOOP label  
-
-ret
+RET
 
 
 
