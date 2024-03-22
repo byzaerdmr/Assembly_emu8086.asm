@@ -31,9 +31,41 @@ label:
  DEC CX
       
 
-
 LOOP label  
 
+ret
+
+
+
+
+
+
+MOV BX, 100h
+MOV DS, BX
+MOV BX, 300h
+MOV ES, BX   
+              
+MOV SI, 1000h
+MOV DI, 1000h             
+              
+
+MOV  CX, 100h  ;255
+
+
+label: 
+
+MOV AX, DS:[SI] 
+INC AX                ;ADD AX,1
+MOV ES:[DI],AX  
+
+INC SI
+INC SI
+
+ADD DI,2
+
+
+
+LOOP label  
 
 ret
 
