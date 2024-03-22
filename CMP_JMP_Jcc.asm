@@ -27,3 +27,15 @@ JMP label
 
 ret
 
+
+; JE  >> ZF=1
+ MOV AL, 5
+ MOV CL, 7
+ 
+ label:
+ INC AL
+ DEC CL
+ 
+ JE label:
+ 
+ ret
