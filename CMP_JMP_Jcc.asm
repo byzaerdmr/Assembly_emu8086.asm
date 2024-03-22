@@ -97,5 +97,19 @@ JE theend
 Jmp label
 
 theend:
-
  ret
+
+
+
+; endless loopa  
+start:
+MOV AL, 3
+
+label:
+ADD AL, 1
+CMP AL, 10   ; CL-10  ;
+
+JE start  
+
+JMP label
+ret
