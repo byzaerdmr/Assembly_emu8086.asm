@@ -37,7 +37,9 @@ ret
 
 
 
-
+ Write a program that reads value from [0100:1000h] - [0100:1200h] memory range and writes
+back to [0300:1000h] - [0300:1200h] memory range. Add 1 to every word before writing back
+to memory. You have to use DS: SI addressing for reading and ES: DI addressing for writing.
 
 
 MOV AX, 0100h 
