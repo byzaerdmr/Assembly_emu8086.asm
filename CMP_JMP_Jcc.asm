@@ -62,3 +62,22 @@ DEC CL
 
 JA label
 ret
+
+
+
+;CMP !result is not stored anywhere!   
+MOV AL, 5
+MOV BL, 5
+
+label:
+
+ADD CL, 1
+ADD CL, 1
+CMP CL, 10   ; CL-10  ;
+
+JE theend
+
+Jmp label
+
+theend:
+ret
