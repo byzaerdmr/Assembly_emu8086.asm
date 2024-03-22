@@ -36,6 +36,6 @@ ret
  INC AL
  DEC CL
  
- JE label:
+ JE label:         ; JNE >> ZF=0 
  
  ret
