@@ -36,6 +36,20 @@ ret
  INC AL
  DEC CL
  
- JE label:         ; JNE >> ZF=0 
+ JE label:        
+ 
+ ret
+
+
+
+ ; JNE >> ZF=0 
+ MOV AL, 5
+ MOV CL, 7
+ 
+ label:
+ INC AL
+ DEC CL
+ 
+ JNE label:
  
  ret
