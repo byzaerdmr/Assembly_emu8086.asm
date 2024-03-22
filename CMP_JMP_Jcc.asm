@@ -3,8 +3,7 @@
    
    MOV AL, 5
    JMP label1    ; jump over 2 lines! 
-   
-   
+     
    PRINT 'Not Jumped!'
    MOV AL, 0
    label1:
@@ -14,7 +13,6 @@
 
 
 ; jmp using for endless loop
-
 MOV AL, 5
 MOV CL, 7 
 
@@ -24,7 +22,6 @@ INC AL
 DEC CL
 
 JMP label
-
 ret
 
 
@@ -37,8 +34,7 @@ ret
  DEC CL
  
  JE label:        
- 
- ret
+  ret
 
 
 
@@ -51,5 +47,18 @@ ret
  DEC CL
  
  JNE label:
- 
- ret
+  ret
+
+
+
+;JA CF=0 and ZF=0    
+MOV AL, 5
+MOV CL, 7
+
+label:
+
+INC AL
+DEC CL
+
+JA label
+ret
