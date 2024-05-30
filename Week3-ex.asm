@@ -39,12 +39,13 @@ ret
 MOV BX, 100h
 MOV DS, BX
 
-MOV CX, 99d  ; or 64h  
+MOV CX, 100d  ; or 64h  
 
-  label:
-       
- ADD AX,CX
- DEC CX
+  label:  
+  
+  DEC CX
+  ADD AX,CX
+ 
       
 
 LOOP label  
