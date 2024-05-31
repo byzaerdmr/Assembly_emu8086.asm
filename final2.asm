@@ -30,3 +30,17 @@ LODSB
 LODSB
 
 RET
+
+
+
+Write a program that stores value of BCDEh between 0100:0300h and 0100:03FFh memory addresses.
+MOV AX, 100h
+MOV ES, AX
+MOV DI, 300h
+
+MOV AX, 0BCDEh
+MOV CX, 80h
+REP STOSW
+
+ret
+
