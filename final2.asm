@@ -44,3 +44,21 @@ REP STOSW
 
 ret
 
+
+
+Write a program that reads values between 0100:0300h and 0100:03FFh, subtracts 1234h from these values and writes results back to the same addresses.
+
+MOV AX, 100h
+MOV DS, AX
+MOV SI, 300h
+MOV DI, 300h
+MOV CX, 80h
+
+label:
+LODSW 
+SUB AX, 1234h
+STOSW
+LOOP label 
+
+ret                     
+
