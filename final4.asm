@@ -2,7 +2,6 @@
 
 LEA BX, myname
 
-
 MOV AL, [BX]
 
 MOV AH, 0Eh
@@ -17,7 +16,24 @@ label:
     
 LOOP label
 
+RET
+myname DB 'Beyza Erdemir'
+
+
+LEA BX, myname
+
+MOV AL, [BX]
+
+MOV AH, 0Eh
+INT 10h  
+label: 
+
+    INC BX 
+    MOV AL, [BX]
+    INT 10h 
+    CMP AL, 0   
+    
+JNE label
 
 RET
-
-myname DB 'Beyza Erdemir'
+myname DB 'Beyza Erdemir',0
