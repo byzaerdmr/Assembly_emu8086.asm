@@ -70,3 +70,34 @@ LOOP label
 RET
 
 myname DB 'Beyza Erdemir',0
+
+
+Write a program that writes a given lowercase string variable to the screen with uppercase characters. (e. g.  name DB "John DOE" --> JOHN DOE) 
+LEA BX, myname
+MOV AH, 0Eh
+
+label: 
+
+    MOV AL, [BX]  
+    CMP AL, 0
+    
+    JE end 
+    CMP AL, 97
+    JB write   
+    
+    CMP AL, 122 
+    JA write 
+    
+    SUB AL, 32
+    
+    write:
+    INT 10h 
+    INC BX  
+    
+JMP label 
+end:
+MOV AH, 4Ch
+INT 21h
+
+RET
+myname DB 'Beyza Erdemir',0
