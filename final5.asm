@@ -23,3 +23,20 @@ MOV [3000h], 20
 SAR [3000h], 2  ;diveded by 4
 
 RET
+
+
+Write a program that shift the value of 0100:1400h memory address to the right, until the value of 12th bit will be 0.
+MOV word ptr[1400h], 1111100111100000b
+MOV CX,              0000100000000000b 
+
+MOV AX, [1400h]  
+
+loop:
+
+    SHR AX, 1
+    TEST AX, CX
+    JZ toend
+    
+JMP loop
+toend:
+ret
