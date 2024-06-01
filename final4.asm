@@ -101,3 +101,33 @@ INT 21h
 
 RET
 myname DB 'Beyza Erdemir',0
+
+
+Write a program that writes a given uppercase  string variable to the screen with lowercase characters.
+
+LEA BX, myname
+MOV AH, 0Eh
+
+label: 
+    MOV AL, [BX]  
+    CMP AL, 0
+    
+    JE end 
+    CMP AL, 65
+    JB write   
+    
+    CMP AL, 90
+    JA write 
+    
+    ADD AL, 32
+    
+    write:
+    INT 10h 
+    INC BX  
+    
+JMP label 
+end:
+MOV AH, 4Ch
+INT 21h
+RET
+myname DB 'BeYZa ErdEmir',0
