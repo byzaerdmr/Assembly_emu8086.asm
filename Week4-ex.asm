@@ -1,4 +1,7 @@
-MOV [1000h], 0C2h      
+
+Write a program that analysis 0100:1000h memory address. 
+If value of  0100:1000h is equals to C2h write FFh value to 0100:1100h memory address.
+If the value is not equals to C2h then write AAh to 0100:1100h memory address.MOV [1000h], 0C2h      
 
 CMP [1000h], 0C2h
 JZ true
@@ -14,7 +17,8 @@ false:
  ret
 
 
-
+There is an array of bytes written on memory beginning from 0100:1000h with an ending byte value of 00h.
+Copy this array to memory beginning from 0100:2000h memory address. Use the array predefined below:
 ;ilk degerler
 MOV byte ptr [1000h], 12h
 MOV byte ptr [1001h], 34h
